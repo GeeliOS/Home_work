@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Языки</title>
+</head>
+<body>
+<h2>Список языков</h2>
+<a href='/about'> Назад </a>
+<ol>
+    {% for country_in in country_info %}
+    <li >{{ country_in.languages }}</li>
+    {% endfor %}
+</ol>
+</body>
+</html>
