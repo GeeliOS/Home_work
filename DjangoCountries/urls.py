@@ -6,6 +6,8 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    # TODO: вы добавили имена url'ам, но этими именами в шаблонах не пользуетесь
+    # TODO: главная страница отсутствует
     path('about', views.about, name='about'),
     path('languages-list', views.languages_list, name='languages-list'),
     path('countries-list', views.countries_list, name='countries-list'),
