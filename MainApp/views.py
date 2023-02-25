@@ -1,17 +1,18 @@
 import json
 from django.shortcuts import render, HttpResponse
+from MainApp.models import countrys
 
-with open('/home/student/Projets/DjangoCountries/MainApp/sw_templates.json') as f:
+with open('MainApp/sw_templates.json') as f:
     file_content = f.read()
     country_info = json.loads(file_content)
 
-
-def about(request):
+def home(request):
     result = f"""
-  <center> <a  href='/countries-list'>Страны</a><br>
-   <a  href='/languages-list'>Языки</a></center>
-    """
+    <center> <a  href='/countries-list'>Страны</a><br>
+     <a  href='/languages-list'>Языки</a></center>
+      """
     return HttpResponse(result)
+
 
 def countries_list(request):
     context={
@@ -28,8 +29,14 @@ def languages_list(request):
 
 def countrie(request, name):
     for countryin in country_info:
+
         if countryin['country']==name:
-            context={
-                "countryin":countryin
+            context = {
+                "country_info": countryin
             }
     return render(request, 'countrie.html', context)
+
+# context={
+#     "countryin": countryin['country'],
+#     "languages": ', '.join(countryin['languages'])
+# }

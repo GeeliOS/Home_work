@@ -6,10 +6,10 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('about', views.about, name='about'),
-    path('languages-list', views.languages_list, name='languages-list'),
-    path('countries-list', views.countries_list, name='countries-list'),
-    path('countrie/<str:name>', views.countrie, name='countrie'),
+    path('', views.home),
+    path('languages-list', views.languages_list),
+    path('countries-list', views.countries_list),
+    path('countrie/<str:name>', views.countrie),
 ]
 
 

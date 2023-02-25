@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ countryin.country }}</title>
+    <title>{{ country_info.country }}</title>
 </head>
 <body>
-<h2>Страна: {{ countryin.country }}</h2>
-<div>Языки на которых говорят: {{ countryin.languages }}</div>
+<h2>Страна: {{ country_info.country }}</h2>
+<b><u><div>Языки на которых говорят: <br> </u></b>python manage.py migrate
+    {% for country_in in country_info.languages %}
+            {{ country_in }},<br>
+    {% endfor %}</div>
+<br>
 <a href='/countries-list'> Назад </a>
 </body>
 </html>
