@@ -6,11 +6,12 @@
 </head>
 <body>
 <h2>Страна: {{ country_info.country }}</h2>
-<b><u><div>Языки на которых говорят: <br> </u></b>python manage.py migrate
+<b><u><div>Языки на которых говорят:</div></b></u> <br>
+    <ol>
     {% for country_in in country_info.languages %}
-            {{ country_in }},<br>
-    {% endfor %}</div>
-<br>
+            <li>{{ country_in }}</li><br>
+    {% endfor %}
+        </li>
 <a href='/countries-list'> Назад </a>
 </body>
 </html>

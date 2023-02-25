@@ -22,8 +22,9 @@ def countries_list(request):
 
 
 def languages_list(request):
+
     context={
-        "country_info":country_info
+        "country_info":" ".join(country_info[0]['languages'])
     }
     return render(request, 'languages-list.html', context)
 
