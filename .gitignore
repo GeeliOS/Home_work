@@ -1,4 +1,4 @@
 .idea/
-*venv/
+*venv_djangoCountries/
 *.pyc
 db.*
