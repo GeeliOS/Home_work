@@ -6,10 +6,10 @@
 </head>
 <body>
 <h2>Список стран</h2>
-<a href='/'> Назад </a>
+<a href="{% url 'home' %}"> Назад </a>
 <ol>
     {% for country_in in country_info %}
-    <li ><a href='/countrie/{{ country_in.country }}'>{{ country_in.country }}</a></li>
+    <li ><a href="{% url 'countrie' country_in.country %}">{{ country_in.country }}</a></li>
     {% endfor %}
 </ol>
 </body>

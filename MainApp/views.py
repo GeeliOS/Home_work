@@ -1,6 +1,5 @@
 import json
 from django.shortcuts import render, HttpResponse
-from MainApp.models import countrys
 
 with open('MainApp/sw_templates.json') as f:
     file_content = f.read()
@@ -8,8 +7,12 @@ with open('MainApp/sw_templates.json') as f:
 
 def home(request):
     result = f"""
-    <center> <a  href='/countries-list'>Страны</a><br>
-     <a  href='/languages-list'>Языки</a></center>
+    <head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+</head>
+    <center> <a  href="{'countries-list'}">Страны</a><br>
+     <a  href="{'languages-list'}">Языки</a></center>
       """
     return HttpResponse(result)
 
@@ -22,9 +25,12 @@ def countries_list(request):
 
 
 def languages_list(request):
-
+    new_y = set()
+    for i in range(len(country_info)):
+        for j in range(len(country_info[i]['languages'])):
+            new_y.add(country_info[i]['languages'][j])
     context={
-        "country_info":" ".join(country_info[0]['languages'])
+        "country_info":new_y
     }
     return render(request, 'languages-list.html', context)
 
