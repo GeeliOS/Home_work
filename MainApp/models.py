@@ -4,14 +4,14 @@ from django.db import models
 class Languages(models.Model):
    name = models.CharField(max_length=100)
    def __repr__(self):
-      return f"Language: {self.id}"
+      return f"{self.name}"
 
 class Countrys(models.Model):
    name  = models.CharField(max_length=100)
    languages_id = models.ManyToManyField(to=Languages)
 
    def __repr__(self):
-      return f"Country: {self.id} | {self.languages_id}"
+      return f"{self.name}"
 
 # ЯЗЫКИ ЗАПОЛНЕНИЕ ТАБЛИЦЫ
 # class Languages(models.Model):

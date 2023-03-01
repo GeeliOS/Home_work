@@ -33,12 +33,11 @@ def languages_list(request):
 
 
 def countrie(request, name):
-
     # for countryin in country_info:
     #
     #     if countryin['country']==name:
     country = Countrys.objects.get(name=name)
-    language=Languages.objects.get(id=country.languages_id)
+    language=Countrys.objects.get(id=country.id).languages_id.all()
     context = {
     "country_info": country,
     "language_info": language
