@@ -1,6 +1,7 @@
 import json
 from django.shortcuts import render, HttpResponse
 from MainApp.models import Countrys, Languages
+# TODO: нужно убрать чтение из файла, информация теперь в БД
 with open('MainApp/sw_templates.json') as f:
     file_content = f.read()
     country_info = json.loads(file_content)
