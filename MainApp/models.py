@@ -11,7 +11,7 @@ class Countrys(models.Model):
    languages_id = models.ManyToManyField(to=Languages)
 
    def __repr__(self):
-      return f"Country: {self.id}"
+      return f"Country: {self.id} | {self.languages_id}"
 
 # ЯЗЫКИ ЗАПОЛНЕНИЕ ТАБЛИЦЫ
 # class Languages(models.Model):

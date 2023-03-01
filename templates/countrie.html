@@ -2,11 +2,11 @@
 <title>{{ country_info.country }}</title>
 {% load static %}
 {% block content %}
-<h2>Страна: {{ country_info.country }}</h2>
+<h2>Страна: {{ country_info.name }}</h2>
 <b><u><div>Языки на которых говорят:</div></b></u> <br>
     <ol>
-    {% for country_in in country_info.languages %}
-            <li>{{ country_in }}</li><br>
+    {% for language_in in language_info %}
+            <li>{{ language_in.name }}</li><br>
     {% endfor %}
         </li>
 <a href="{% url 'countries-list' %}"> Назад </a>

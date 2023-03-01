@@ -6,7 +6,7 @@
 <a href="{% url 'home' %}"> Назад </a>
 <ol>
     {% for country_in in country_info %}
-    <li >{{ country_in }}</li>
+    <li >{{ country_in.name }}</li>
     {% endfor %}
 </ol>
 {% endblock %}

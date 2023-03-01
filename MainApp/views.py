@@ -1,6 +1,6 @@
 import json
 from django.shortcuts import render, HttpResponse
-from MainApp.models import Countrys
+from MainApp.models import Countrys, Languages
 with open('MainApp/sw_templates.json') as f:
     file_content = f.read()
     country_info = json.loads(file_content)
@@ -21,22 +21,28 @@ def countries_list(request):
 
 
 def languages_list(request):
-    new_y = set()
-    for i in range(len(country_info)):
-        for j in range(len(country_info[i]['languages'])):
-            new_y.add(country_info[i]['languages'][j])
+    # new_y = set()
+    # for i in range(len(country_info)):
+    #     for j in range(len(country_info[i]['languages'])):
+    #         new_y.add(country_info[i]['languages'][j])
+    language=Languages.objects.all()
     context={
-        "country_info":new_y
+        "country_info":language
     }
     return render(request, 'languages-list.html', context)
 
-def countrie(request, name):
-    for countryin in country_info:
 
-        if countryin['country']==name:
-            context = {
-                "country_info": countryin
-            }
+def countrie(request, name):
+
+    # for countryin in country_info:
+    #
+    #     if countryin['country']==name:
+    country = Countrys.objects.get(name=name)
+    language=Languages.objects.get(id=country.languages_id)
+    context = {
+    "country_info": country,
+    "language_info": language
+    }
     return render(request, 'countrie.html', context)
 
 # context={
