@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
-<title>{{ country_info.country }}</title>
+<head>
+    <title>{{ country_info.country }}</title>
+</head>
 {% load static %}
 {% block content %}
 <h2>Страна: {{ country_info.name }}</h2>
-<b><u><div>Языки на которых говорят:</div></b></u> <br>
+
+<b><u><div>Языки на которых говорят:</div></u></b> <br>
+<a href="{% url 'countries-list' %}"> Назад </a>
     <ol>
     {% for language_in in language_info %}
             <li>{{ language_in.name }}</li><br>
     {% endfor %}
-        </li>
-<a href="{% url 'countries-list' %}"> Назад </a>
+    </ol>
 {% endblock %}

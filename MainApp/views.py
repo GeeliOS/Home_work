@@ -6,13 +6,10 @@ with open('MainApp/sw_templates.json') as f:
     country_info = json.loads(file_content)
 
 def home(request):
-
     return render(request, 'home.html')
 
 
 def countries_list(request):
-
-
     country = Countrys.objects.all()
     context={
         "country_info":country
@@ -20,11 +17,8 @@ def countries_list(request):
     return render(request, 'countries-list.html', context)
 
 
+
 def languages_list(request):
-    # new_y = set()
-    # for i in range(len(country_info)):
-    #     for j in range(len(country_info[i]['languages'])):
-    #         new_y.add(country_info[i]['languages'][j])
     language=Languages.objects.all()
     context={
         "country_info":language
@@ -33,9 +27,6 @@ def languages_list(request):
 
 
 def countrie(request, name):
-    # for countryin in country_info:
-    #
-    #     if countryin['country']==name:
     country = Countrys.objects.get(name=name)
     language=Countrys.objects.get(id=country.id).languages_id.all()
     context = {
@@ -44,7 +35,16 @@ def countrie(request, name):
     }
     return render(request, 'countrie.html', context)
 
-# context={
-#     "countryin": countryin['country'],
-#     "languages": ', '.join(countryin['languages'])
-# }
+
+
+
+def language_countrys(request, name):
+    languages = Languages.objects.get(name=name)
+    country = Countrys.objects.filter(languages_id__name=languages.name)
+    context = {
+    "country_info": country,
+    "language_info": languages
+    }
+    return render(request, 'language_countrys.html', context)
+
+
