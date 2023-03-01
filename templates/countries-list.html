@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Список стран</title>
-</head>
-<body>
+<title>Список стран</title>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <h2>Список стран</h2>
 <a href="{% url 'home' %}"> Назад </a>
 <ol>
     {% for country_in in country_info %}
-    <li ><a href="{% url 'countrie' country_in.country %}">{{ country_in.country }}</a></li>
+    <li ><a href="{% url 'countrie' country_in.name %}">{{ country_in.name }}</a></li>
     {% endfor %}
 </ol>
-</body>
-</html>
+{% endblock %}

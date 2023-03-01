@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Список языков</title>
-</head>
-<body>
+<title>Список языков</title>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <h2>Список языков</h2>
 <a href="{% url 'home' %}"> Назад </a>
 <ol>
@@ -12,5 +9,4 @@
     <li >{{ country_in }}</li>
     {% endfor %}
 </ol>
-</body>
-</html>
+{% endblock %}

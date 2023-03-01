@@ -1,25 +1,21 @@
 import json
 from django.shortcuts import render, HttpResponse
-
+from MainApp.models import Countrys
 with open('MainApp/sw_templates.json') as f:
     file_content = f.read()
     country_info = json.loads(file_content)
 
 def home(request):
-    result = f"""
-    <head>
-    <meta charset="UTF-8">
-    <title>Меню</title>
-</head>
-    <center> <a  href="{'countries-list'}">Страны</a><br>
-     <a  href="{'languages-list'}">Языки</a></center>
-      """
-    return HttpResponse(result)
+
+    return render(request, 'home.html')
 
 
 def countries_list(request):
+
+
+    country = Countrys.objects.all()
     context={
-        "country_info":country_info
+        "country_info":country
     }
     return render(request, 'countries-list.html', context)
 

@@ -1,0 +1,7 @@
+<title>Меню</title>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <center> <a  href="{% url 'countries-list'%}">Страны</a><br>
+     <a  href="{% url 'languages-list'%}">Языки</a></center>
+{% endblock %}
