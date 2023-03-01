@@ -30,9 +30,9 @@
 
 ## Выполнять после: <span style="color:red">Модуль-2</span>
 - [x] <span style="color:blue">5.</span> Оформите главную страницу в виде полноценного html-документа
-- [x] <span style="color:blue">6.</span> Список с данными для стран возьмите <a name="https://github.com/samayo/country-json/blob/master/src/country-by-languages.json">тут.</a>
+- [x] <span style="color:blue">6.</span> Список с данными для стран возьмите [тут](https://github.com/samayo/country-json/blob/master/src/country-by-languages.json).
 **Примечание**: пока мы работаем без БД, скопируйте данные о странах в файл (разместите файл в корне проекта).
- Для получение информации из файла используйте <a name="https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html">работу с файлами в Python</a>, <a name="https://pyneng.readthedocs.io/ru/latest/book/17_serialization/json.html">работа с json-1</a> и <a name="https://dvmn.org/encyclopedia/modules/json/">работа с json-2</a>.
+ Для получение информации из файла используйте [работу с файлами в Python](https://pythonworld.ru/tipy-dannyx-v-python/fajly-rabota-s-fajlami.html) , [работа с json-1](https://pyneng.readthedocs.io/ru/latest/book/17_serialization/json.html) и [работа с json-2](https://dvmn.org/encyclopedia/modules/json/).
 - [x] <span style="color:blue">7.</span> По url: **/countries-list/** отобразите нумерованный список всех стран, отобразив в списке только названия стран.
 - [x] <span style="color:blue">8.</span> Название каждой страны сделайте гиперссылкой, которая ведет на персональную страницу данной страны. 
 На персональной странице страны отобразите ее название(в виде заголовка) и список всех языков, на которых говорят в данной стране.
@@ -40,7 +40,7 @@
 
 ## Выполнять после: <span style="color:red">Модуль-3</span>
 - [x] <span style="color:blue">10.</span> Создайте модель-класс Country.
-- [x] <span style="color:blue">11.</span> Перенесите все страны из <a name="https://github.com/samayo/country-json/blob/master/src/country-by-languages.json">исходного json</a> файла в базу данных(БД).
+- [x] <span style="color:blue">11.</span> Перенесите все страны из [исходного json](https://github.com/samayo/country-json/blob/master/src/country-by-languages.json) файла в базу данных(БД).
 - [x] <span style="color:blue">12.</span> Измените работу вашего приложения на работу с БД
 - [x] <span style="color:blue">13.</span> Выгрузите данные из БД в фикстуру(fixture) **countries.json**
 
@@ -59,9 +59,9 @@
 - [ ] <span style="color:blue">17.</span> На главной странице добавьте еще одну ссылку “Языки”. По ссылке отобразите страницу со списком всех языков на котором говорят во всех странах.
 - [ ] <span>18.</span> Все языки в списке сделайте гиперссылками, каждая ведет на отдельную страницу, на которой отображаются страны, которые говорят на выбранном языке.
 ## Выполнять после: <span style="color:red">Модуль-7(финальные задания)
-- [ ] <span>19.</span> На верху страницы со списком стран добавьте алфавит, каждая буква которого является гиперссылкой. Каждая гиперссылка(на букве) ведет на страницу на которой отображаются только страны на выбранную букву. См. аналогию <a name="https://www.worldometers.info/geography/alphabetical-list-of-countries/">тут</a>.
-- [ ] <span>20.</span> Внизу страницы со списком стран реализуйте <a name="https://blog.calltouch.ru/chto-takoe-paginatsiya/">пагинацию</a>. На каждой странице отобразите 10 стран.
+- [ ] <span>19.</span> На верху страницы со списком стран добавьте алфавит, каждая буква которого является гиперссылкой. Каждая гиперссылка(на букве) ведет на страницу на которой отображаются только страны на выбранную букву. См. аналогию [тут](https://www.worldometers.info/geography/alphabetical-list-of-countries/).
+- [ ] <span>20.</span> Внизу страницы со списком стран реализуйте [пагинацию](https://blog.calltouch.ru/chto-takoe-paginatsiya/). На каждой странице отобразите 10 стран.
 
-Отправьте проект мне на почту: <a name="eyurchenko@specialist.ru">eyurchenko@specialist.ru</a> (ссылку на GitHub)
+Отправьте проект мне на почту: [eyurchenko@specialist.ru](eyurchenko@specialist.ru) (ссылку на GitHub)
 
 **Важно!** Для получения зачета по курсу, необходимо выполнить **все** задания <span style="color:blue">**выделенные синим цветом**</span>. Остальные задания - опциональные.
